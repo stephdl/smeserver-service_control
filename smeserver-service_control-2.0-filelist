@@ -1,0 +1,463 @@
+%dir %attr(0755,root,root) /etc/e-smith
+%dir %attr(0755,root,root) /etc/e-smith/events
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/services2adjust
+/etc/e-smith/events/service-access/services2adjust/wan
+/etc/e-smith/events/service-access/services2adjust/masq
+/etc/e-smith/events/service-access/services2adjust/httpd-e-smith
+/etc/e-smith/events/service-access/services2adjust/httpd-admin
+/etc/e-smith/events/service-access/services2adjust/qmail
+/etc/e-smith/events/service-access/services2adjust/pptpd
+/etc/e-smith/events/service-access/services2adjust/sshd
+/etc/e-smith/events/service-access/services2adjust/radiusd
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/root
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/root/.ssh
+/etc/e-smith/events/service-access/templates2expand/root/.ssh/config
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/home
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/home/httpd
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/home/httpd/html
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/home/httpd/html/horde
+/etc/e-smith/events/service-access/templates2expand/home/httpd/html/horde/conf.menu.apps.php
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/home/httpd/html/horde/config
+/etc/e-smith/events/service-access/templates2expand/home/httpd/html/horde/config/prefs.php
+/etc/e-smith/events/service-access/templates2expand/home/httpd/html/horde/config/registry.php
+/etc/e-smith/events/service-access/templates2expand/home/httpd/html/horde/config/mime_drivers.php
+/etc/e-smith/events/service-access/templates2expand/home/httpd/html/horde/config/conf.php
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/home/e-smith
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/home/e-smith/ssl.pem
+/etc/e-smith/events/service-access/templates2expand/home/e-smith/ssl.pem/pem
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/var
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/var/qmail
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/var/qmail/alias
+/etc/e-smith/events/service-access/templates2expand/var/qmail/alias/.qmail-default
+/etc/e-smith/events/service-access/templates2expand/var/qmail/alias/.qmail-localdelivery-default
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/var/qmail/control
+/etc/e-smith/events/service-access/templates2expand/var/qmail/control/plusdomain
+/etc/e-smith/events/service-access/templates2expand/var/qmail/control/virtualdomains
+/etc/e-smith/events/service-access/templates2expand/var/qmail/control/smtproutes
+/etc/e-smith/events/service-access/templates2expand/var/qmail/control/defaulthost
+/etc/e-smith/events/service-access/templates2expand/var/qmail/control/bouncefrom
+/etc/e-smith/events/service-access/templates2expand/var/qmail/control/concurrencylocal
+/etc/e-smith/events/service-access/templates2expand/var/qmail/control/envnoathost
+/etc/e-smith/events/service-access/templates2expand/var/qmail/control/badrcptto
+/etc/e-smith/events/service-access/templates2expand/var/qmail/control/badmailfrom
+/etc/e-smith/events/service-access/templates2expand/var/qmail/control/locals
+/etc/e-smith/events/service-access/templates2expand/var/qmail/control/me
+/etc/e-smith/events/service-access/templates2expand/var/qmail/control/defaultdomain
+/etc/e-smith/events/service-access/templates2expand/var/qmail/control/doublebounceto
+/etc/e-smith/events/service-access/templates2expand/var/qmail/control/rcpthosts
+/etc/e-smith/events/service-access/templates2expand/var/qmail/control/bouncehost
+/etc/e-smith/events/service-access/templates2expand/var/qmail/control/databytes
+/etc/e-smith/events/service-access/templates2expand/var/qmail/control/concurrencyremote
+/etc/e-smith/events/service-access/templates2expand/var/qmail/control/helohost
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/var/lib
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/var/lib/dhcp
+/etc/e-smith/events/service-access/templates2expand/var/lib/dhcp/dhclient-eth0.conf
+/etc/e-smith/events/service-access/templates2expand/var/lib/dhcp/dhclient-eth1.conf
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/var/service
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/var/service/wan
+/etc/e-smith/events/service-access/templates2expand/var/service/wan/run.pppoe.conf
+/etc/e-smith/events/service-access/templates2expand/var/service/wan/pppoe.pppd.conf
+/etc/e-smith/events/service-access/templates2expand/var/service/wan/dhclient.config
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/var/service/dnscache.forwarder
+/etc/e-smith/events/service-access/templates2expand/var/service/dnscache.forwarder/config
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/var/service/dnscache.forwarder/root
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/var/service/dnscache.forwarder/root/servers
+/etc/e-smith/events/service-access/templates2expand/var/service/dnscache.forwarder/root/servers/@
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/var/service/qpsmtpd
+/etc/e-smith/events/service-access/templates2expand/var/service/qpsmtpd/runenv
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/var/service/qpsmtpd/ssl
+/etc/e-smith/events/service-access/templates2expand/var/service/qpsmtpd/ssl/cert.pem
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/var/service/qpsmtpd/peers
+/etc/e-smith/events/service-access/templates2expand/var/service/qpsmtpd/peers/local
+/etc/e-smith/events/service-access/templates2expand/var/service/qpsmtpd/peers/0
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/var/service/qpsmtpd/config
+/etc/e-smith/events/service-access/templates2expand/var/service/qpsmtpd/config/norelayclients
+/etc/e-smith/events/service-access/templates2expand/var/service/qpsmtpd/config/plugins
+/etc/e-smith/events/service-access/templates2expand/var/service/qpsmtpd/config/require_resolvable_fromhost
+/etc/e-smith/events/service-access/templates2expand/var/service/qpsmtpd/config/spool_dir
+/etc/e-smith/events/service-access/templates2expand/var/service/qpsmtpd/config/timeout
+/etc/e-smith/events/service-access/templates2expand/var/service/qpsmtpd/config/smtpgreeting
+/etc/e-smith/events/service-access/templates2expand/var/service/qpsmtpd/config/rhsbl_zones
+/etc/e-smith/events/service-access/templates2expand/var/service/qpsmtpd/config/badhelo
+/etc/e-smith/events/service-access/templates2expand/var/service/qpsmtpd/config/relayclients
+/etc/e-smith/events/service-access/templates2expand/var/service/qpsmtpd/config/memory_threshold
+/etc/e-smith/events/service-access/templates2expand/var/service/qpsmtpd/config/dnsbl_allow
+/etc/e-smith/events/service-access/templates2expand/var/service/qpsmtpd/config/IP
+/etc/e-smith/events/service-access/templates2expand/var/service/qpsmtpd/config/badrcptto_patterns
+/etc/e-smith/events/service-access/templates2expand/var/service/qpsmtpd/config/signatures_patterns
+/etc/e-smith/events/service-access/templates2expand/var/service/qpsmtpd/config/loglevel
+/etc/e-smith/events/service-access/templates2expand/var/service/qpsmtpd/config/timeoutsmtpd
+/etc/e-smith/events/service-access/templates2expand/var/service/qpsmtpd/config/invalid_resolvable_fromhost
+/etc/e-smith/events/service-access/templates2expand/var/service/qpsmtpd/config/plugin_dirs
+/etc/e-smith/events/service-access/templates2expand/var/service/qpsmtpd/config/dnsbl_zones
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/var/service/qpsmtpd/config/peers
+/etc/e-smith/events/service-access/templates2expand/var/service/qpsmtpd/config/peers/local
+/etc/e-smith/events/service-access/templates2expand/var/service/qpsmtpd/config/peers/0
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/var/service/sqpsmtpd
+/etc/e-smith/events/service-access/templates2expand/var/service/sqpsmtpd/runenv
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/var/service/ippp
+/etc/e-smith/events/service-access/templates2expand/var/service/ippp/config
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/var/service/dnscache
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/var/service/dnscache/root
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/var/service/dnscache/root/servers
+/etc/e-smith/events/service-access/templates2expand/var/service/dnscache/root/servers/@
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/etc
+/etc/e-smith/events/service-access/templates2expand/etc/fetchmail
+/etc/e-smith/events/service-access/templates2expand/etc/crontab
+/etc/e-smith/events/service-access/templates2expand/etc/smartd.conf
+/etc/e-smith/events/service-access/templates2expand/etc/diald.filter
+/etc/e-smith/events/service-access/templates2expand/etc/pptpd.conf
+/etc/e-smith/events/service-access/templates2expand/etc/dhcpd.conf
+/etc/e-smith/events/service-access/templates2expand/etc/hosts.deny
+/etc/e-smith/events/service-access/templates2expand/etc/startmail
+/etc/e-smith/events/service-access/templates2expand/etc/hosts
+/etc/e-smith/events/service-access/templates2expand/etc/hosts.allow
+/etc/e-smith/events/service-access/templates2expand/etc/inittab
+/etc/e-smith/events/service-access/templates2expand/etc/dovecot.conf
+/etc/e-smith/events/service-access/templates2expand/etc/services
+/etc/e-smith/events/service-access/templates2expand/etc/php.ini
+/etc/e-smith/events/service-access/templates2expand/etc/nsswitch.conf
+/etc/e-smith/events/service-access/templates2expand/etc/resolv.conf
+/etc/e-smith/events/service-access/templates2expand/etc/lynx.cfg
+/etc/e-smith/events/service-access/templates2expand/etc/sysctl.conf
+/etc/e-smith/events/service-access/templates2expand/etc/Muttrc
+/etc/e-smith/events/service-access/templates2expand/etc/syslog.conf
+/etc/e-smith/events/service-access/templates2expand/etc/oidentd_masq.conf
+/etc/e-smith/events/service-access/templates2expand/etc/diald.conf
+/etc/e-smith/events/service-access/templates2expand/etc/proftpd.conf
+/etc/e-smith/events/service-access/templates2expand/etc/securetty
+/etc/e-smith/events/service-access/templates2expand/etc/freshclam.conf
+/etc/e-smith/events/service-access/templates2expand/etc/mime.types
+/etc/e-smith/events/service-access/templates2expand/etc/modprobe.conf
+/etc/e-smith/events/service-access/templates2expand/etc/pine.conf
+/etc/e-smith/events/service-access/templates2expand/etc/HOSTNAME
+/etc/e-smith/events/service-access/templates2expand/etc/shells
+/etc/e-smith/events/service-access/templates2expand/etc/clamd.conf
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/etc/diald
+/etc/e-smith/events/service-access/templates2expand/etc/diald/link
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/etc/cron.d
+/etc/e-smith/events/service-access/templates2expand/etc/cron.d/clamav
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/etc/squid
+/etc/e-smith/events/service-access/templates2expand/etc/squid/squid.conf
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/etc/ups
+/etc/e-smith/events/service-access/templates2expand/etc/ups/upsd.conf
+/etc/e-smith/events/service-access/templates2expand/etc/ups/ups.conf
+/etc/e-smith/events/service-access/templates2expand/etc/ups/upsmon.conf
+/etc/e-smith/events/service-access/templates2expand/etc/ups/upsd.users
+/etc/e-smith/events/service-access/templates2expand/etc/ups/upssched.conf
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/etc/ppp
+/etc/e-smith/events/service-access/templates2expand/etc/ppp/pap-secrets
+/etc/e-smith/events/service-access/templates2expand/etc/ppp/chap-secrets
+/etc/e-smith/events/service-access/templates2expand/etc/ppp/options.pptpd
+/etc/e-smith/events/service-access/templates2expand/etc/ppp/ip-down.local
+/etc/e-smith/events/service-access/templates2expand/etc/ppp/ip-up.local
+/etc/e-smith/events/service-access/templates2expand/etc/ppp/ioptions
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/etc/httpd
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/etc/httpd/conf
+/etc/e-smith/events/service-access/templates2expand/etc/httpd/conf/httpd.conf
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/etc/httpd/conf/proxy
+/etc/e-smith/events/service-access/templates2expand/etc/httpd/conf/proxy/proxy.pac
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/etc/httpd/admin-conf
+/etc/e-smith/events/service-access/templates2expand/etc/httpd/admin-conf/httpd.conf
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/etc/openldap
+/etc/e-smith/events/service-access/templates2expand/etc/openldap/ldap.conf
+/etc/e-smith/events/service-access/templates2expand/etc/openldap/slapd.conf
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/etc/raddb
+/etc/e-smith/events/service-access/templates2expand/etc/raddb/proxy.conf
+/etc/e-smith/events/service-access/templates2expand/etc/raddb/radiusd.conf
+/etc/e-smith/events/service-access/templates2expand/etc/raddb/users
+/etc/e-smith/events/service-access/templates2expand/etc/raddb/clients.conf
+/etc/e-smith/events/service-access/templates2expand/etc/raddb/eap.conf
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/etc/sysconfig
+/etc/e-smith/events/service-access/templates2expand/etc/sysconfig/ups
+/etc/e-smith/events/service-access/templates2expand/etc/sysconfig/syslog
+/etc/e-smith/events/service-access/templates2expand/etc/sysconfig/network
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/etc/sysconfig/network-scripts
+/etc/e-smith/events/service-access/templates2expand/etc/sysconfig/network-scripts/ifcfg-ppp0
+/etc/e-smith/events/service-access/templates2expand/etc/sysconfig/network-scripts/ifcfg-eth0.4094
+/etc/e-smith/events/service-access/templates2expand/etc/sysconfig/network-scripts/ifcfg-eth1
+/etc/e-smith/events/service-access/templates2expand/etc/sysconfig/network-scripts/chat-ppp0
+/etc/e-smith/events/service-access/templates2expand/etc/sysconfig/network-scripts/ifcfg-eth0
+/etc/e-smith/events/service-access/templates2expand/etc/sysconfig/network-scripts/ifcfg-bond0
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/etc/e-smith
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/etc/e-smith/web
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/etc/e-smith/web/panels
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/etc/e-smith/web/panels/manager
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/etc/e-smith/web/panels/manager/html
+/etc/e-smith/events/service-access/templates2expand/etc/e-smith/web/panels/manager/html/header.htm
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/etc/e-smith/web/common
+/etc/e-smith/events/service-access/templates2expand/etc/e-smith/web/common/head.tmpl
+/etc/e-smith/events/service-access/templates2expand/etc/e-smith/web/common/foot.tmpl
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/etc/e-smith/web/common/css
+/etc/e-smith/events/service-access/templates2expand/etc/e-smith/web/common/css/hwinfo.css
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/etc/radiusclient
+/etc/e-smith/events/service-access/templates2expand/etc/radiusclient/dictionary.microsoft
+/etc/e-smith/events/service-access/templates2expand/etc/radiusclient/servers
+/etc/e-smith/events/service-access/templates2expand/etc/radiusclient/dictionary
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/etc/pam.d
+/etc/e-smith/events/service-access/templates2expand/etc/pam.d/login
+/etc/e-smith/events/service-access/templates2expand/etc/pam.d/pwauth
+/etc/e-smith/events/service-access/templates2expand/etc/pam.d/passwd
+/etc/e-smith/events/service-access/templates2expand/etc/pam.d/system-auth
+/etc/e-smith/events/service-access/templates2expand/etc/pam.d/samba
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/etc/ssh
+/etc/e-smith/events/service-access/templates2expand/etc/ssh/sshd_config
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/etc/samba
+/etc/e-smith/events/service-access/templates2expand/etc/samba/smbusers
+/etc/e-smith/events/service-access/templates2expand/etc/samba/smb.conf
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/etc/rc.d
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/etc/rc.d/init.d
+/etc/e-smith/events/service-access/templates2expand/etc/rc.d/init.d/masq
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/etc/atalk
+/etc/e-smith/events/service-access/templates2expand/etc/atalk/AppleVolumes.default
+/etc/e-smith/events/service-access/templates2expand/etc/atalk/afpd.conf
+/etc/e-smith/events/service-access/templates2expand/etc/atalk/netatalk.conf
+/etc/e-smith/events/service-access/templates2expand/etc/atalk/papd.conf
+/etc/e-smith/events/service-access/templates2expand/etc/atalk/atalkd.conf
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/etc/logrotate.d
+/etc/e-smith/events/service-access/templates2expand/etc/logrotate.d/syslog
+%dir %attr(0755,root,root) /etc/e-smith/events/service-access/templates2expand/etc/security
+/etc/e-smith/events/service-access/templates2expand/etc/security/pam_abl.conf
+%dir %attr(0755,root,root) /etc/e-smith/events/actions
+%attr(0554,root,root) /etc/e-smith/events/actions/service-control
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one
+/etc/e-smith/events/service-one/S90service-control
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/services2adjust
+/etc/e-smith/events/service-one/services2adjust/masq
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/root
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/root/.ssh
+/etc/e-smith/events/service-one/templates2expand/root/.ssh/config
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/home
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/home/httpd
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/home/httpd/html
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/home/httpd/html/horde
+/etc/e-smith/events/service-one/templates2expand/home/httpd/html/horde/conf.menu.apps.php
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/home/httpd/html/horde/config
+/etc/e-smith/events/service-one/templates2expand/home/httpd/html/horde/config/prefs.php
+/etc/e-smith/events/service-one/templates2expand/home/httpd/html/horde/config/registry.php
+/etc/e-smith/events/service-one/templates2expand/home/httpd/html/horde/config/mime_drivers.php
+/etc/e-smith/events/service-one/templates2expand/home/httpd/html/horde/config/conf.php
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/home/e-smith
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/home/e-smith/ssl.pem
+/etc/e-smith/events/service-one/templates2expand/home/e-smith/ssl.pem/pem
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/var
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/var/qmail
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/var/qmail/alias
+/etc/e-smith/events/service-one/templates2expand/var/qmail/alias/.qmail-default
+/etc/e-smith/events/service-one/templates2expand/var/qmail/alias/.qmail-localdelivery-default
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/var/qmail/control
+/etc/e-smith/events/service-one/templates2expand/var/qmail/control/plusdomain
+/etc/e-smith/events/service-one/templates2expand/var/qmail/control/virtualdomains
+/etc/e-smith/events/service-one/templates2expand/var/qmail/control/smtproutes
+/etc/e-smith/events/service-one/templates2expand/var/qmail/control/defaulthost
+/etc/e-smith/events/service-one/templates2expand/var/qmail/control/bouncefrom
+/etc/e-smith/events/service-one/templates2expand/var/qmail/control/concurrencylocal
+/etc/e-smith/events/service-one/templates2expand/var/qmail/control/envnoathost
+/etc/e-smith/events/service-one/templates2expand/var/qmail/control/badrcptto
+/etc/e-smith/events/service-one/templates2expand/var/qmail/control/badmailfrom
+/etc/e-smith/events/service-one/templates2expand/var/qmail/control/locals
+/etc/e-smith/events/service-one/templates2expand/var/qmail/control/me
+/etc/e-smith/events/service-one/templates2expand/var/qmail/control/defaultdomain
+/etc/e-smith/events/service-one/templates2expand/var/qmail/control/doublebounceto
+/etc/e-smith/events/service-one/templates2expand/var/qmail/control/rcpthosts
+/etc/e-smith/events/service-one/templates2expand/var/qmail/control/bouncehost
+/etc/e-smith/events/service-one/templates2expand/var/qmail/control/databytes
+/etc/e-smith/events/service-one/templates2expand/var/qmail/control/concurrencyremote
+/etc/e-smith/events/service-one/templates2expand/var/qmail/control/helohost
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/var/lib
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/var/lib/dhcp
+/etc/e-smith/events/service-one/templates2expand/var/lib/dhcp/dhclient-eth0.conf
+/etc/e-smith/events/service-one/templates2expand/var/lib/dhcp/dhclient-eth1.conf
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/var/service
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/var/service/wan
+/etc/e-smith/events/service-one/templates2expand/var/service/wan/run.pppoe.conf
+/etc/e-smith/events/service-one/templates2expand/var/service/wan/pppoe.pppd.conf
+/etc/e-smith/events/service-one/templates2expand/var/service/wan/dhclient.config
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/var/service/dnscache.forwarder
+/etc/e-smith/events/service-one/templates2expand/var/service/dnscache.forwarder/config
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/var/service/dnscache.forwarder/root
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/var/service/dnscache.forwarder/root/servers
+/etc/e-smith/events/service-one/templates2expand/var/service/dnscache.forwarder/root/servers/@
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/var/service/qpsmtpd
+/etc/e-smith/events/service-one/templates2expand/var/service/qpsmtpd/runenv
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/var/service/qpsmtpd/ssl
+/etc/e-smith/events/service-one/templates2expand/var/service/qpsmtpd/ssl/cert.pem
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/var/service/qpsmtpd/peers
+/etc/e-smith/events/service-one/templates2expand/var/service/qpsmtpd/peers/local
+/etc/e-smith/events/service-one/templates2expand/var/service/qpsmtpd/peers/0
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/var/service/qpsmtpd/config
+/etc/e-smith/events/service-one/templates2expand/var/service/qpsmtpd/config/norelayclients
+/etc/e-smith/events/service-one/templates2expand/var/service/qpsmtpd/config/plugins
+/etc/e-smith/events/service-one/templates2expand/var/service/qpsmtpd/config/require_resolvable_fromhost
+/etc/e-smith/events/service-one/templates2expand/var/service/qpsmtpd/config/spool_dir
+/etc/e-smith/events/service-one/templates2expand/var/service/qpsmtpd/config/timeout
+/etc/e-smith/events/service-one/templates2expand/var/service/qpsmtpd/config/smtpgreeting
+/etc/e-smith/events/service-one/templates2expand/var/service/qpsmtpd/config/rhsbl_zones
+/etc/e-smith/events/service-one/templates2expand/var/service/qpsmtpd/config/badhelo
+/etc/e-smith/events/service-one/templates2expand/var/service/qpsmtpd/config/relayclients
+/etc/e-smith/events/service-one/templates2expand/var/service/qpsmtpd/config/memory_threshold
+/etc/e-smith/events/service-one/templates2expand/var/service/qpsmtpd/config/dnsbl_allow
+/etc/e-smith/events/service-one/templates2expand/var/service/qpsmtpd/config/IP
+/etc/e-smith/events/service-one/templates2expand/var/service/qpsmtpd/config/badrcptto_patterns
+/etc/e-smith/events/service-one/templates2expand/var/service/qpsmtpd/config/signatures_patterns
+/etc/e-smith/events/service-one/templates2expand/var/service/qpsmtpd/config/loglevel
+/etc/e-smith/events/service-one/templates2expand/var/service/qpsmtpd/config/timeoutsmtpd
+/etc/e-smith/events/service-one/templates2expand/var/service/qpsmtpd/config/invalid_resolvable_fromhost
+/etc/e-smith/events/service-one/templates2expand/var/service/qpsmtpd/config/plugin_dirs
+/etc/e-smith/events/service-one/templates2expand/var/service/qpsmtpd/config/dnsbl_zones
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/var/service/qpsmtpd/config/peers
+/etc/e-smith/events/service-one/templates2expand/var/service/qpsmtpd/config/peers/local
+/etc/e-smith/events/service-one/templates2expand/var/service/qpsmtpd/config/peers/0
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/var/service/sqpsmtpd
+/etc/e-smith/events/service-one/templates2expand/var/service/sqpsmtpd/runenv
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/var/service/ippp
+/etc/e-smith/events/service-one/templates2expand/var/service/ippp/config
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/var/service/dnscache
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/var/service/dnscache/root
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/var/service/dnscache/root/servers
+/etc/e-smith/events/service-one/templates2expand/var/service/dnscache/root/servers/@
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/etc
+/etc/e-smith/events/service-one/templates2expand/etc/fetchmail
+/etc/e-smith/events/service-one/templates2expand/etc/crontab
+/etc/e-smith/events/service-one/templates2expand/etc/smartd.conf
+/etc/e-smith/events/service-one/templates2expand/etc/diald.filter
+/etc/e-smith/events/service-one/templates2expand/etc/pptpd.conf
+/etc/e-smith/events/service-one/templates2expand/etc/dhcpd.conf
+/etc/e-smith/events/service-one/templates2expand/etc/hosts.deny
+/etc/e-smith/events/service-one/templates2expand/etc/startmail
+/etc/e-smith/events/service-one/templates2expand/etc/hosts
+/etc/e-smith/events/service-one/templates2expand/etc/hosts.allow
+/etc/e-smith/events/service-one/templates2expand/etc/inittab
+/etc/e-smith/events/service-one/templates2expand/etc/dovecot.conf
+/etc/e-smith/events/service-one/templates2expand/etc/services
+/etc/e-smith/events/service-one/templates2expand/etc/php.ini
+/etc/e-smith/events/service-one/templates2expand/etc/nsswitch.conf
+/etc/e-smith/events/service-one/templates2expand/etc/resolv.conf
+/etc/e-smith/events/service-one/templates2expand/etc/lynx.cfg
+/etc/e-smith/events/service-one/templates2expand/etc/sysctl.conf
+/etc/e-smith/events/service-one/templates2expand/etc/Muttrc
+/etc/e-smith/events/service-one/templates2expand/etc/syslog.conf
+/etc/e-smith/events/service-one/templates2expand/etc/oidentd_masq.conf
+/etc/e-smith/events/service-one/templates2expand/etc/diald.conf
+/etc/e-smith/events/service-one/templates2expand/etc/proftpd.conf
+/etc/e-smith/events/service-one/templates2expand/etc/securetty
+/etc/e-smith/events/service-one/templates2expand/etc/freshclam.conf
+/etc/e-smith/events/service-one/templates2expand/etc/mime.types
+/etc/e-smith/events/service-one/templates2expand/etc/modprobe.conf
+/etc/e-smith/events/service-one/templates2expand/etc/pine.conf
+/etc/e-smith/events/service-one/templates2expand/etc/HOSTNAME
+/etc/e-smith/events/service-one/templates2expand/etc/shells
+/etc/e-smith/events/service-one/templates2expand/etc/clamd.conf
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/etc/diald
+/etc/e-smith/events/service-one/templates2expand/etc/diald/link
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/etc/cron.d
+/etc/e-smith/events/service-one/templates2expand/etc/cron.d/clamav
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/etc/squid
+/etc/e-smith/events/service-one/templates2expand/etc/squid/squid.conf
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/etc/ups
+/etc/e-smith/events/service-one/templates2expand/etc/ups/upsd.conf
+/etc/e-smith/events/service-one/templates2expand/etc/ups/ups.conf
+/etc/e-smith/events/service-one/templates2expand/etc/ups/upsmon.conf
+/etc/e-smith/events/service-one/templates2expand/etc/ups/upsd.users
+/etc/e-smith/events/service-one/templates2expand/etc/ups/upssched.conf
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/etc/ppp
+/etc/e-smith/events/service-one/templates2expand/etc/ppp/pap-secrets
+/etc/e-smith/events/service-one/templates2expand/etc/ppp/chap-secrets
+/etc/e-smith/events/service-one/templates2expand/etc/ppp/options.pptpd
+/etc/e-smith/events/service-one/templates2expand/etc/ppp/ip-down.local
+/etc/e-smith/events/service-one/templates2expand/etc/ppp/ip-up.local
+/etc/e-smith/events/service-one/templates2expand/etc/ppp/ioptions
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/etc/httpd
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/etc/httpd/conf
+/etc/e-smith/events/service-one/templates2expand/etc/httpd/conf/httpd.conf
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/etc/httpd/conf/proxy
+/etc/e-smith/events/service-one/templates2expand/etc/httpd/conf/proxy/proxy.pac
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/etc/httpd/admin-conf
+/etc/e-smith/events/service-one/templates2expand/etc/httpd/admin-conf/httpd.conf
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/etc/openldap
+/etc/e-smith/events/service-one/templates2expand/etc/openldap/ldap.conf
+/etc/e-smith/events/service-one/templates2expand/etc/openldap/slapd.conf
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/etc/raddb
+/etc/e-smith/events/service-one/templates2expand/etc/raddb/proxy.conf
+/etc/e-smith/events/service-one/templates2expand/etc/raddb/radiusd.conf
+/etc/e-smith/events/service-one/templates2expand/etc/raddb/users
+/etc/e-smith/events/service-one/templates2expand/etc/raddb/clients.conf
+/etc/e-smith/events/service-one/templates2expand/etc/raddb/eap.conf
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/etc/sysconfig
+/etc/e-smith/events/service-one/templates2expand/etc/sysconfig/ups
+/etc/e-smith/events/service-one/templates2expand/etc/sysconfig/syslog
+/etc/e-smith/events/service-one/templates2expand/etc/sysconfig/network
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/etc/sysconfig/network-scripts
+/etc/e-smith/events/service-one/templates2expand/etc/sysconfig/network-scripts/ifcfg-ppp0
+/etc/e-smith/events/service-one/templates2expand/etc/sysconfig/network-scripts/ifcfg-eth0.4094
+/etc/e-smith/events/service-one/templates2expand/etc/sysconfig/network-scripts/ifcfg-eth1
+/etc/e-smith/events/service-one/templates2expand/etc/sysconfig/network-scripts/chat-ppp0
+/etc/e-smith/events/service-one/templates2expand/etc/sysconfig/network-scripts/ifcfg-eth0
+/etc/e-smith/events/service-one/templates2expand/etc/sysconfig/network-scripts/ifcfg-bond0
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/etc/e-smith
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/etc/e-smith/web
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/etc/e-smith/web/panels
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/etc/e-smith/web/panels/manager
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/etc/e-smith/web/panels/manager/html
+/etc/e-smith/events/service-one/templates2expand/etc/e-smith/web/panels/manager/html/header.htm
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/etc/e-smith/web/common
+/etc/e-smith/events/service-one/templates2expand/etc/e-smith/web/common/head.tmpl
+/etc/e-smith/events/service-one/templates2expand/etc/e-smith/web/common/foot.tmpl
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/etc/e-smith/web/common/css
+/etc/e-smith/events/service-one/templates2expand/etc/e-smith/web/common/css/hwinfo.css
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/etc/radiusclient
+/etc/e-smith/events/service-one/templates2expand/etc/radiusclient/dictionary.microsoft
+/etc/e-smith/events/service-one/templates2expand/etc/radiusclient/servers
+/etc/e-smith/events/service-one/templates2expand/etc/radiusclient/dictionary
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/etc/pam.d
+/etc/e-smith/events/service-one/templates2expand/etc/pam.d/login
+/etc/e-smith/events/service-one/templates2expand/etc/pam.d/pwauth
+/etc/e-smith/events/service-one/templates2expand/etc/pam.d/passwd
+/etc/e-smith/events/service-one/templates2expand/etc/pam.d/system-auth
+/etc/e-smith/events/service-one/templates2expand/etc/pam.d/samba
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/etc/ssh
+/etc/e-smith/events/service-one/templates2expand/etc/ssh/sshd_config
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/etc/samba
+/etc/e-smith/events/service-one/templates2expand/etc/samba/smbusers
+/etc/e-smith/events/service-one/templates2expand/etc/samba/smb.conf
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/etc/rc.d
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/etc/rc.d/init.d
+/etc/e-smith/events/service-one/templates2expand/etc/rc.d/init.d/masq
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/etc/atalk
+/etc/e-smith/events/service-one/templates2expand/etc/atalk/AppleVolumes.default
+/etc/e-smith/events/service-one/templates2expand/etc/atalk/afpd.conf
+/etc/e-smith/events/service-one/templates2expand/etc/atalk/netatalk.conf
+/etc/e-smith/events/service-one/templates2expand/etc/atalk/papd.conf
+/etc/e-smith/events/service-one/templates2expand/etc/atalk/atalkd.conf
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/etc/logrotate.d
+/etc/e-smith/events/service-one/templates2expand/etc/logrotate.d/syslog
+%dir %attr(0755,root,root) /etc/e-smith/events/service-one/templates2expand/etc/security
+/etc/e-smith/events/service-one/templates2expand/etc/security/pam_abl.conf
+%dir %attr(0755,root,root) /etc/e-smith/locale
+%dir %attr(0755,root,root) /etc/e-smith/locale/en-us
+%dir %attr(0755,root,root) /etc/e-smith/locale/en-us/etc
+%dir %attr(0755,root,root) /etc/e-smith/locale/en-us/etc/e-smith
+%dir %attr(0755,root,root) /etc/e-smith/locale/en-us/etc/e-smith/web
+%dir %attr(0755,root,root) /etc/e-smith/locale/en-us/etc/e-smith/web/functions
+/etc/e-smith/locale/en-us/etc/e-smith/web/functions/servicecontrol
+%dir %attr(0755,root,root) /etc/e-smith/locale/fr
+%dir %attr(0755,root,root) /etc/e-smith/locale/fr/etc
+%dir %attr(0755,root,root) /etc/e-smith/locale/fr/etc/e-smith
+%dir %attr(0755,root,root) /etc/e-smith/locale/fr/etc/e-smith/web
+%dir %attr(0755,root,root) /etc/e-smith/locale/fr/etc/e-smith/web/functions
+/etc/e-smith/locale/fr/etc/e-smith/web/functions/servicecontrol
+%dir %attr(0755,root,root) /etc/e-smith/web
+%dir %attr(0550,root,admin) /etc/e-smith/web/panels
+%dir %attr(0755,root,root) /etc/e-smith/web/panels/manager
+%dir %attr(0755,root,root) /etc/e-smith/web/panels/manager/cgi-bin
+/etc/e-smith/web/panels/manager/cgi-bin/servicecontrol
+%dir %attr(0550,root,admin) /etc/e-smith/web/functions
+%attr(04750,root,admin) /etc/e-smith/web/functions/servicecontrol
+%dir %attr(0755,root,root) /usr/lib/perl5/site_perl/esmith
+%dir %attr(0755,root,root) /usr/lib/perl5/site_perl/esmith/FormMagick
+%dir %attr(0755,root,root) /usr/lib/perl5/site_perl/esmith/FormMagick/Panel
+%attr(0644,root,root) /usr/lib/perl5/site_perl/esmith/FormMagick/Panel/servicecontrol.pm
+%doc COPYING

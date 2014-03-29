@@ -1,0 +1,142 @@
+<lexicon lang="fr">
+    <entry>
+        <base>Configuration</base>
+        <trans>\n      Configuration\n    </trans>
+    </entry>
+    <entry>        
+	<base>Service Control</base>
+        <trans>Controler tous les services</trans>
+    </entry>
+
+    <entry>
+        <base>FORM_TITLE</base>
+        <trans>Service Control</trans>
+    </entry>
+    <entry>
+        <base>FIRST_PAGE_DESCRIPTION</base>
+	<trans>
+	<![CDATA[
+	<p>Service Control permet d'activer ou de désactiver certains services<br />
+	Il permet également de modifier le Port TCP du service si il y en a lieu</p>
+	<p><b>ATTENTION</b> en désactivant certains services(par example httpd) vous pouvez rendre votre serveur instable.</p>
+	]]>
+	</trans>
+    </entry>
+    <entry>
+        <base>SERVICE_FORM_ACTIVATE</base>
+        <trans>Modifier le status des services</trans>
+    </entry>
+    <entry>
+        <base>SERVICE_STATUS_enabled</base> 
+        <trans>Désactiver</trans>
+    </entry>
+    <entry>
+        <base>SERVICE_STATUS_disabled</base> 
+        <trans>Activer</trans>
+    </entry>
+    <entry>
+        <base>SERVICE_NAME</base>                     
+        <trans>Nom</trans>                      
+    </entry>
+    <entry>
+        <base>SERVICE_STATUS</base>                     
+        <trans>Statut</trans>                      
+    </entry>
+    <entry>
+        <base>SERVICE_ACTION</base>                     
+        <trans>Action</trans>                      
+    </entry>
+    <entry>
+        <base>SUCCESSFULLY_ACTIVATE_SERVICE</base>               
+        <trans>      
+    <![CDATA[
+     <p>Statut du service a été changé avec succès.</p>
+     ]]>
+        </trans>
+    </entry>
+    <entry>
+        <base>VALIDE</base>
+        <trans>Changer</trans>
+    </entry>
+
+    <entry>
+        <base>SERVICE_FORM_TCPPORT</base>
+        <trans>Modification du port TCP des Services</trans>
+    </entry>
+
+    <entry>
+        <base>SERVICE_TCPPORT</base>
+        <trans>port TCP</trans>
+    </entry>
+    <entry>
+        <base>SUCCESSFULLY_TCPPORT_CHANGE</base>              
+        <trans>
+        <![CDATA[
+        <p>Le port TCP du service a été changé avec succès</p>
+		<p>Le service vas redémarrer avec les nouveaux paramètres<br />
+        <b>ATTENTION</b> certain services n'utilise pas (encore) ce paramètre et nécessite d'autres manipulations !
+        ]]>
+        </trans>
+    </entry>
+    <entry>
+        <base>SUCCESSFULLY_TCPPORT_NOCHANGE</base>
+        <trans>Le port TCP est identique, aucune autre modifications n'est à faire.</trans>
+    </entry>
+    <entry>
+        <base>CANCEL</base>
+        <trans>Annulé</trans>
+    </entry>
+    <entry>
+        <base>VALIDE</base>
+        <trans>OK</trans>
+    </entry>
+    <entry>
+        <base>ALERTdisabled</base>
+        <trans>
+        <![CDATA[
+        <b>ATTENTION</b><br />Etes-vous sûr de vouloir activer ce service<b>!!!</b>
+        ]]> 
+        </trans>
+    </entry>
+    <entry>
+        <base>ALERTenabled</base>
+        <trans>
+        <![CDATA[
+        <b>ATTENTION</b><br />Etes-vous sûr de vouloir <b>désactiver</b> ce service<b>!!!</b>
+        ]]> 
+        </trans>
+    </entry>
+    <entry>
+        <base>ALERTTCP</base>       
+        <trans>
+        <![CDATA[
+        Etes-vous sûr de vouloir changer le port TCP de ce service<b>!!!</b>                                                    
+        ]]>
+        </trans>
+    </entry>
+    <entry>
+        <base>ACTION_CANCEL_USER</base>
+        <trans>Annuler par l'utilisateur</trans> 
+    </entry>
+    <entry>
+        <base>SERVICE_ACCESS</base>
+        <trans>Accès</trans>
+    </entry>
+    <entry>
+        <base>SERVICE_ACCESS_ACTION</base>
+        <trans>Accès Publique/Privé</trans>
+    </entry>
+    <entry>
+        <base>SERVICE_ACCESS_public</base> 
+        <trans>Privé</trans>
+    </entry>
+    <entry>
+        <base>SERVICE_ACCESS_private</base> 
+        <trans>Publique</trans>
+    </entry>
+    <entry>
+        <base>SERVICE_FORM_ACCESS</base>
+        <trans>Service Accès</trans>
+    </entry>
+</lexicon>
+

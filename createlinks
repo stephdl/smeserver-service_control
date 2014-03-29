@@ -1,0 +1,57 @@
+#!/usr/bin/perl -w
+# This script creates the symlinks needed by this RPM
+# Specific support exists to create symlinks within e-smith web "panels"
+# and for links from named "events" directories into the "actions" directory
+
+use esmith::Build::CreateLinks qw(:all);
+
+# Links for the panel
+panel_link("servicecontrol", "manager");
+
+
+#sub panel_link-obsolete way
+#{
+#    my ($function, $panel) = @_;
+#
+#    unlink "root/etc/e-smith/web/panels/$panel/cgi-bin/$function";
+#    symlink("../../../functions/$function",
+#	    "root/etc/e-smith/web/panels/$panel/cgi-bin/$function")
+#	or die "Can't symlink to root/etc/e-smith/web/panels/$panel".
+#	    "/cgi-bin/$function: $!";
+#}
+
+sub event_link
+{
+    my ($action, $event, $level) = @_;
+
+    unlink "root/etc/e-smith/events/${event}/S${level}${action}";
+    symlink("../actions/${action}",
+	"root/etc/e-smith/events/${event}/S${level}${action}")
+    or die "Can't symlink to " .
+	"root/etc/e-smith/events/${event}/S${level}${action}: $!";
+}
+
+#--------------------------------------------------
+# functions for manager panel
+#--------------------------------------------------
+my $panel = "manager";
+
+#panel_link("function1", $panel);
+#panel_link("function2", $panel);
+
+#--------------------------------------------------
+# actions for console-save event:
+#--------------------------------------------------
+$event = "console-save";
+
+#event_link("action1", $event, "55");
+#event_link("action2", $event, "60");
+
+#--------------------------------------------------
+# actions for domain-create event:
+#--------------------------------------------------
+$event = "domain-create";
+
+#event_link("action1", $event, "55");
+#event_link("action2", $event, "90");
+
