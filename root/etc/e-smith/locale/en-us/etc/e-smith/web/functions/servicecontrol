@@ -1,0 +1,158 @@
+<lexicon lang="en-us">
+    <entry>
+        <base>Configuration</base>
+        <trans>Configuration</trans>
+    </entry>
+    <entry>        
+	<base>Service Control</base>
+        <trans>Control all services</trans>
+    </entry>
+
+    <entry>
+        <base>FORM_TITLE</base>
+        <trans>Service Control</trans>
+    </entry>
+    <entry>
+        <base>FIRST_PAGE_DESCRIPTION</base>
+	<trans>
+	<![CDATA[
+	<p>Service Control can activate or deactive all services<br />
+	it can also modified TCP Port of the service</p>
+	<p><b>PAY ATTENTION</b> when deactivate some service (for exemple httpd) you can put your system in a bad state.</p>
+	]]>
+	</trans>
+    </entry>
+    <entry>
+        <base>SERVICE_FORM_ACTIVATE</base>
+        <trans>Service (de)Activation</trans>
+    </entry>
+    <entry>
+        <base>SERVICE_STATUS_enabled</base> 
+        <trans>Disable</trans>
+    </entry>
+    <entry>
+        <base>SERVICE_STATUS_disabled</base> 
+        <trans>Enable</trans>
+    </entry>
+    <entry>
+        <base>SERVICE_NAME</base>                     
+        <trans>Name</trans>                      
+    </entry>
+    <entry>
+        <base>SERVICE_STATUS</base>                     
+        <trans>Status</trans>                      
+    </entry>
+    <entry>
+        <base>SERVICE_ACTION</base>                     
+        <trans>Action</trans>                      
+    </entry>
+    <entry>
+        <base>SUCCESSFULLY_ACTIVATE_SERVICE</base>               
+        <trans>      
+    <![CDATA[
+     <p>Service status successfully changed.</p>
+     ]]>
+        </trans>
+    </entry>
+    <entry>
+        <base>VALIDE</base>
+        <trans>Change</trans>
+    </entry>
+
+    <entry>
+        <base>SERVICE_FORM_TCPPORT</base>
+        <trans>Service TCP Port change</trans>
+    </entry>
+
+    <entry>
+        <base>SERVICE_TCPPORT</base>
+        <trans>TCP Port</trans>
+    </entry>
+    <entry>
+        <base>SUCCESSFULLY_TCPPORT_CHANGE</base>              
+        <trans>
+        <![CDATA[
+        <p>Port TCP changed successfully</p>
+		<p>Service will restart using new TCP Port<br />
+        <b>PAY ATTENTION</b> some service don't care about this parameters !
+        ]]>
+        </trans>
+    </entry>
+    <entry>
+        <base>SUCCESSFULLY_TCPPORT_NOCHANGE</base>
+        <trans>TCP Port are identical, no further action needed.</trans>
+    </entry>
+    <entry>
+	<base>CANCEL</base>
+	<trans>Cancel</trans>
+    </entry>
+    <entry>
+	<base>VALIDE</base>
+	<trans>OK</trans>
+    </entry>
+    <entry>
+        <base>ALERTdisabled</base>
+        <trans>
+        <![CDATA[
+        <b>BEWARE</b><br />Are you sure you want to enable this service<b>!!!</b>
+        ]]>
+        </trans>
+    </entry>
+    <entry>
+        <base>ALERTenabled</base>
+        <trans>  
+        <![CDATA[
+        <b>BEWARE</b><br />Are you sure you want to <b>disable</b> this service<b>!!!</b>
+        ]]>
+        </trans>
+    </entry>
+    <entry>
+        <base>ALERTTCP</base>
+        <trans>
+        <![CDATA[
+        Are you sure you want to change TCP port for this service<b>!!!</b>
+        ]]> 
+        </trans>
+    </entry>
+    <entry>
+	<base>ACTION_CANCEL_USER</base>
+	<trans>Canceled by user</trans>
+    </entry>
+    <entry>
+        <base>ALERTprivate</base>
+        <trans>
+        <![CDATA[
+        <b>BEWARE</b><br />Are you sure you want to put this service in public access<b>!!!</b>
+        ]]>
+        </trans>
+    </entry>
+    <entry>
+        <base>ALERTpublic</base>
+        <trans>  
+        <![CDATA[
+        <b>BEWARE</b><br />Are you sure you want to put this service in private access<b>!!!</b>
+        ]]>
+        </trans>
+    </entry>
+    <entry>
+        <base>SERVICE_ACCESS</base>
+        <trans>Access</trans>
+    </entry>
+    <entry>
+        <base>SERVICE_ACCESS_ACTION</base>
+        <trans>Public/Private Access</trans>
+    </entry>
+    <entry>
+        <base>SERVICE_ACCESS_public</base> 
+        <trans>Private</trans>
+    </entry>
+    <entry>
+        <base>SERVICE_ACCESS_private</base> 
+        <trans>Public</trans>
+    </entry>
+    <entry>
+        <base>SERVICE_FORM_ACCESS</base>
+	<trans>Service Access change</trans>
+    </entry>
+</lexicon>
+
