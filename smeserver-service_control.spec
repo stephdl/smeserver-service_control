@@ -9,7 +9,7 @@ Distribution: SME Server
 License: GNU GPL version 2
 Group: SMEserver/addon
 Source: %{name}-%{version}.tar.gz
-Patch0: smeserver-service_control-2.0-utf8.patch
+#Patch0: smeserver-service_control-2.0-utf8.patch
 BuildArchitectures: noarch
 BuildRoot: /var/tmp/%{name}-%{version}-buildroot
 BuildRequires: e-smith-devtools
@@ -45,7 +45,7 @@ sme server administration panel to control service status and tcp port
 
 %prep
 %setup
-%patch0 -p1
+#%patch0 -p1
 #%patch1 -p1
 
 %build
