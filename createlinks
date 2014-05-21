@@ -9,16 +9,6 @@ use esmith::Build::CreateLinks qw(:all);
 panel_link("servicecontrol", "manager");
 
 
-#sub panel_link-obsolete way
-#{
-#    my ($function, $panel) = @_;
-#
-#    unlink "root/etc/e-smith/web/panels/$panel/cgi-bin/$function";
-#    symlink("../../../functions/$function",
-#	    "root/etc/e-smith/web/panels/$panel/cgi-bin/$function")
-#	or die "Can't symlink to root/etc/e-smith/web/panels/$panel".
-#	    "/cgi-bin/$function: $!";
-#}
 
 sub event_link
 {
@@ -30,6 +20,22 @@ sub event_link
     or die "Can't symlink to " .
 	"root/etc/e-smith/events/${event}/S${level}${action}: $!";
 }
+#--------------------------------------------------
+##service2adjust
+#--------------------------------------------------
+foreach my $event (qw( service-access )){
+     safe_symlink("sigusr1", "root/etc/e-smith/events/$event/services2adjust/httpd-e-smith");
+   safe_symlink("adjust", "root/etc/e-smith/events/$event/services2adjust/masq");
+   safe_symlink("sigterm", "root/etc/e-smith/events/$event/services2adjust/pptpd");
+   safe_symlink("sighup", "root/etc/e-smith/events/$event/services2adjust/qmail");
+   safe_symlink("sigterm", "root/etc/e-smith/events/$event/services2adjust/radiusd");
+   safe_symlink("sighup", "root/etc/e-smith/events/$event/services2adjust/sshd");
+   safe_symlink("restart", "root/etc/e-smith/events/$event/services2adjust/wan");
+}
+foreach my $event (qw( service-one )){
+   safe_symlink("adjust", "root/etc/e-smith/events/$event/services2adjust/masq");
+}
+
 
 #--------------------------------------------------
 # functions for manager panel

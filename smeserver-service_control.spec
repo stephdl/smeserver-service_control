@@ -1,6 +1,6 @@
 %define name smeserver-service_control
 %define version 2.0
-%define release 2
+%define release 3
 Summary: SME Server service control Panel
 Name: %{name}
 Version: %{version}
@@ -18,6 +18,9 @@ AutoReqProv: no
 
 
 %changelog
+* Wed May 21 2014 stephane de labrusse <stephdl@de-labrusse.fr> - 2.0-3
+* adaptation to git use, creation of service2adjust by createlinks
+
 * Wed Jan 22 2014 stephane de labrusse <stephdl@de-labrusse.fr>
 - first release for SME Server 8.0 thanks to Michel Van hees for his work
 - Adaptation to utf8
