@@ -36,6 +36,16 @@ foreach my $event (qw( service-one )){
    safe_symlink("adjust", "root/etc/e-smith/events/$event/services2adjust/masq");
 }
 
+#-------------------------------------------------
+##Action2events
+#-------------------------------------------------
+
+foreach my $event (qw ( service-access
+                        service-one))
+        {
+            event_link("update-ifcfg", $event, "10");
+        }
+
 
 #--------------------------------------------------
 # functions for manager panel
