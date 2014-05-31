@@ -531,7 +531,7 @@ swap service access
 sub AccessChange {
     my ($self, $service) = @_;
     my $action;
-    my $startScript
+    my $startScript;
     my $record = $config->get($service);
     $self->debug_msg("Service: $service");
     $self->debug_msg("Actual status: " . $record->prop("access"));
