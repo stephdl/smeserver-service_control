@@ -1,5 +1,5 @@
 %define name smeserver-service_control
-%define version 2.0
+%define version 2.2
 %define release 3
 Summary: SME Server service control Panel
 Name: %{name}
