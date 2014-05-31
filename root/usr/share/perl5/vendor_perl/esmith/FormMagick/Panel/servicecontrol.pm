@@ -406,7 +406,7 @@ sub displayServiceTcp {
 
 =head2 displayServiceAccess
 
-This return all service definies in serve
+This return all service definies in server
 
 =cut
     
