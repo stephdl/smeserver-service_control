@@ -9,19 +9,6 @@ use esmith::Build::CreateLinks qw(:all);
 panel_link("servicecontrol", "manager");
 
 
-
-#sub event_link
-#{
-#    my ($action, $event, $level) = @_;
-#
-#    unlink "root/etc/e-smith/events/${event}/S${level}${action}";
-#    symlink("../actions/${action}",
-#	"root/etc/e-smith/events/${event}/S${level}${action}")
-#    or die "Can't symlink to " .
-#	"root/etc/e-smith/events/${event}/S${level}${action}: $!";
-#}
-
-
 #--------------------------------------------------
 ##service2adjust
 #--------------------------------------------------
@@ -55,32 +42,9 @@ foreach my $event (qw( service-access
 foreach my $event (qw ( service-access
                         service-one))
         {
-            event_link("update-ifcfg", $event, "10");
             event_link("service-control", $event, "90");
         }
-
-
-#--------------------------------------------------
-# functions for manager panel
-#--------------------------------------------------
-my $panel = "manager";
-
-#panel_link("function1", $panel);
-#panel_link("function2", $panel);
-
-#--------------------------------------------------
-# actions for console-save event:
-#--------------------------------------------------
-$event = "console-save";
-
-#event_link("action1", $event, "55");
-#event_link("action2", $event, "60");
-
-#--------------------------------------------------
-# actions for domain-create event:
-#--------------------------------------------------
-$event = "domain-create";
-
-#event_link("action1", $event, "55");
-#event_link("action2", $event, "90");
-
+foreach my $event (qw (service-expand))
+        {
+            event_link("update-ifcfg", $event, "10");
+        }

@@ -531,7 +531,7 @@ swap service access
 sub AccessChange {
     my ($self, $service) = @_;
     my $action;
-    
+    my $startScript
     my $record = $config->get($service);
     $self->debug_msg("Service: $service");
     $self->debug_msg("Actual status: " . $record->prop("access"));
@@ -541,7 +541,7 @@ sub AccessChange {
     } else {
         die "Bad data in '$service'";  # log this somewhere
     }
-    $action="restart";
+
     if ( $record->prop("access") eq 'private' )
     {
         $record->set_prop("access", "public");
@@ -566,10 +566,11 @@ sub AccessChange {
         $service = 'qpsmtpd' if ( $service eq 'smtpd');
         $service = 'sqpsmtpd' if ( $service eq 'ssmtpd');
 
+    $action="restart";
 
    $startScript = glob("/etc/rc.d/rc7.d/S*$service");
     if ($startScript){
-    esmith::event::event_signal("service-access");}
+    esmith::event::event_signal("service-access", $service, $action);}
 
     $self->success("SUCCESSFULLY_ACTIVATE_SERVICE");
 }
