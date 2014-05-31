@@ -148,7 +148,8 @@ Change TCP Port of a service
 sub ServiceTCPChange {
     my ($self, $service, $port) = @_;
     my $action;
-    
+    my $startScript;
+
     my $record = $config->get($service);
 
     $self->debug_msg("Service: $service");
@@ -165,7 +166,28 @@ sub ServiceTCPChange {
     {
         $record->set_prop("TCPPort", $port);
 		$action="restart";
-		esmith::event::event_signal("service-one", $service, $action);
+#expand all templates
+    esmith::event::event_signal("service-expand");
+
+# A hack since a lot db set as service don't have a service name in rc7.d
+# THINK to change as same in sub ServiceChange and sub AccessChange
+        $service = 'dovecot' if ( $service =~ 'imap');
+        $service = 'httpd-e-smith' if ( $service eq 'modSSL');
+        $service = 'httpd-e-smith' if ( $service eq 'php');
+        $service = 'httpd-e-smith' if ( $service eq 'imp');
+        $service = 'smb' if ( $service eq 'nmbd');
+        $service = 'smb' if ( $service eq 'smbd');
+        $service = 'clamd' if ( $service eq 'clamav');
+        $service = 'dnscache' if ( $service eq 'dnscache.forwarder');
+        $service = 'httpd-e-smith' if ( $service eq 'horde');
+        $service = 'httpd-e-smith' if ( $service eq 'modPerl');
+        $service = 'qpsmtpd' if ( $service eq 'smtpd');
+        $service = 'sqpsmtpd' if ( $service eq 'ssmtpd');
+
+
+   $startScript = glob("/etc/rc.d/rc7.d/S*$service");
+    if ($startScript){     
+    esmith::event::event_signal("service-one", $service, $action);}
 		$self->success("SUCCESSFULLY_TCPPORT_CHANGE");
     } else {
         $self->success("SUCCESSFULLY_TCPPORT_NOCHANGE");
@@ -175,14 +197,15 @@ sub ServiceTCPChange {
 
 =head2 ServiceChange
 
-swap service status
+swap service status : stop or start the service
 
 =cut
 
 sub ServiceChange {
     my ($self, $service) = @_;
     my $action;
-    
+    my $startScript;
+
     my $record = $config->get($service);
     $self->debug_msg("Service: $service");
     $self->debug_msg("Actual status: " . $record->prop("status"));
@@ -201,8 +224,28 @@ sub ServiceChange {
         $record->set_prop("status", "enabled");
 		$action="start";
     }
+#expand all templates
+    esmith::event::event_signal("service-expand");
 
-    esmith::event::event_signal("service-one", $service, $action);
+# A hack since a lot db set as service don't have a service name in rc7.d
+# THINK to change as same in sub ServiceTCPChange and sub AccessChange
+
+        $service = 'dovecot' if ( $service =~ 'imap');
+        $service = 'httpd-e-smith' if ( $service eq 'modSSL');
+        $service = 'httpd-e-smith' if ( $service eq 'php');
+        $service = 'httpd-e-smith' if ( $service eq 'imp');
+        $service = 'smb' if ( $service eq 'nmbd');
+        $service = 'smb' if ( $service eq 'smbd');
+        $service = 'clamd' if ( $service eq 'clamav');
+        $service = 'dnscache' if ( $service eq 'dnscache.forwarder');
+        $service = 'httpd-e-smith' if ( $service eq 'horde');
+        $service = 'httpd-e-smith' if ( $service eq 'modPerl');
+        $service = 'qpsmtpd' if ( $service eq 'smtpd');
+        $service = 'sqpsmtpd' if ( $service eq 'ssmtpd');
+            
+    $startScript = glob("/etc/rc.d/rc7.d/S*$service");
+    if ($startScript){     
+    esmith::event::event_signal("service-one", $service, $action);}
 
     $self->success("SUCCESSFULLY_ACTIVATE_SERVICE");
 }
@@ -505,8 +548,28 @@ sub AccessChange {
     } else {
         $record->set_prop("access", "private");
     }
+#expand all templates
+    esmith::event::event_signal("service-expand");
 
-    esmith::event::event_signal("service-access");
+# A hack since a lot db set as service don't have a service name in rc7.d
+# THINK to change as same in sub ServiceChange and sub ServiceTCPChange
+        $service = 'dovecot' if ( $service =~ 'imap');
+        $service = 'httpd-e-smith' if ( $service eq 'modSSL');
+        $service = 'httpd-e-smith' if ( $service eq 'php');
+        $service = 'httpd-e-smith' if ( $service eq 'imp');
+        $service = 'smb' if ( $service eq 'nmbd');
+        $service = 'smb' if ( $service eq 'smbd');
+        $service = 'clamd' if ( $service eq 'clamav');
+        $service = 'dnscache' if ( $service eq 'dnscache.forwarder');
+        $service = 'httpd-e-smith' if ( $service eq 'horde');
+        $service = 'httpd-e-smith' if ( $service eq 'modPerl');
+        $service = 'qpsmtpd' if ( $service eq 'smtpd');
+        $service = 'sqpsmtpd' if ( $service eq 'ssmtpd');
+
+
+   $startScript = glob("/etc/rc.d/rc7.d/S*$service");
+    if ($startScript){
+    esmith::event::event_signal("service-access");}
 
     $self->success("SUCCESSFULLY_ACTIVATE_SERVICE");
 }
