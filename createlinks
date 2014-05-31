@@ -18,23 +18,26 @@ foreach my $event (qw( service-access
     safe_symlink("sigusr1", "root/etc/e-smith/events/$event/services2adjust/httpd-e-smith");
     safe_symlink("sigusr1", "root/etc/e-smith/events/$event/services2adjust/httpd-admin");
     safe_symlink("adjust", "root/etc/e-smith/events/$event/services2adjust/masq");
-    safe_symlink("condrestart", "root/etc/e-smith/events/$event/services2adjust/pptpd");
+    safe_symlink("sigterm", "root/etc/e-smith/events/$event/services2adjust/pptpd");
     safe_symlink("sighup", "root/etc/e-smith/events/$event/services2adjust/qmail");
     safe_symlink("sigterm", "root/etc/e-smith/events/$event/services2adjust/radiusd");
     safe_symlink("sighup", "root/etc/e-smith/events/$event/services2adjust/sshd");
     safe_symlink("restart", "root/etc/e-smith/events/$event/services2adjust/wan");
-    }
+    safe_symlink("restart", "root/etc/e-smith/events/$event/services2adjust/squid");
+
+   # Added by stephdl for testing purpose, not sure is needed
 #    safe_symlink("restart", "root/etc/e-smith/events/$event/services2adjust/qpsmtpd");
 #    safe_symlink("restart", "root/etc/e-smith/events/$event/services2adjust/sqpsmtpd");
 #    safe_symlink("restart", "root/etc/e-smith/events/$event/services2adjust/pop3");
 #    safe_symlink("restart", "root/etc/e-smith/events/$event/services2adjust/pop3s");   
 #    safe_symlink("reload", "root/etc/e-smith/events/$event/services2adjust/dovecot");   
-#    safe_symlink("force-reload", "root/etc/e-smith/events/$event/services2adjust/squid");   
 #    safe_symlink("sigterm", "root/etc/e-smith/events/$event/services2adjust/dnscache");  
 
-#}
+#    safe_symlink("sigusr1", "root/etc/e-smith/events/$event/services2adjust/ftp");  
+    
+}
 
-
+safe_symlink("/etc/e-smith/events/bootstrap-console-save/templates2expand", "root/etc/e-smith/events/service-expand/templates2expand");
 #-------------------------------------------------
 ##Action2events
 #-------------------------------------------------
@@ -47,4 +50,7 @@ foreach my $event (qw ( service-access
 foreach my $event (qw (service-expand))
         {
             event_link("update-ifcfg", $event, "10");
+            safe_symlink("sigusr1", "root/etc/e-smith/events/$event/services2adjust/httpd-e-smith");
         }
+#proxy-update
+#remoteaccess-update
