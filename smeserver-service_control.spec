@@ -70,9 +70,11 @@ rm -rf $RPM_BUILD_ROOT
 %post
 #/etc/e-smith/events/actions/navigation-conf > /dev/null 2>&1
 #echo Go to your server-manager to use new function
+mkdir -p /etc/e-smith/events/service-expand
+ln -s /etc/e-smith/events/bootstrap-console-save/templates2expand /etc/e-smith/events/service-expand/templates2expand
 
 %postun
 #/etc/e-smith/events/actions/navigation-conf > /dev/null 2>&1
-
+rm -rf /etc/e-smith/events/service-expand
 %files -f %{name}-%{version}-filelist
 %defattr(-,root,root)
