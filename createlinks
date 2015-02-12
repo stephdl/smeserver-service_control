@@ -36,7 +36,7 @@ foreach my $event (qw( service-access
 
 #}
 
-
+safe_symlink("/etc/e-smith/events/bootstrap-console-save/templates2expand", "/etc/e-smith/events/service-expand/templates2expand");
 #-------------------------------------------------
 ##Action2events
 #-------------------------------------------------
