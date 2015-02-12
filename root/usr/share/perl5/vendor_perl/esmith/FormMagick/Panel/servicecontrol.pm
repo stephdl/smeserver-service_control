@@ -183,6 +183,7 @@ sub ServiceTCPChange {
         $service = 'httpd-e-smith' if ( $service eq 'modPerl');
         $service = 'qpsmtpd' if ( $service eq 'smtpd');
         $service = 'sqpsmtpd' if ( $service eq 'ssmtpd');
+        $service = 'spamd' if ( $service eq 'spamassassin');
 
 
    $startScript = glob("/etc/rc.d/rc7.d/S*$service");
@@ -242,7 +243,8 @@ sub ServiceChange {
         $service = 'httpd-e-smith' if ( $service eq 'modPerl');
         $service = 'qpsmtpd' if ( $service eq 'smtpd');
         $service = 'sqpsmtpd' if ( $service eq 'ssmtpd');
-            
+        $service = 'spamd' if ( $service eq 'spamassassin');
+  
     $startScript = glob("/etc/rc.d/rc7.d/S*$service");
     if ($startScript){     
     esmith::event::event_signal("service-one", $service, $action);}
@@ -565,6 +567,7 @@ sub AccessChange {
         $service = 'httpd-e-smith' if ( $service eq 'modPerl');
         $service = 'qpsmtpd' if ( $service eq 'smtpd');
         $service = 'sqpsmtpd' if ( $service eq 'ssmtpd');
+        $service = 'spamd' if ( $service eq 'spamassassin');
 
     $action="restart";
 

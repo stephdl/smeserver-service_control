@@ -25,16 +25,16 @@ foreach my $event (qw( service-access
     safe_symlink("restart", "root/etc/e-smith/events/$event/services2adjust/wan");
     safe_symlink("restart", "root/etc/e-smith/events/$event/services2adjust/squid");
 
-    }
-#    safe_symlink("restart", "root/etc/e-smith/events/$event/services2adjust/qpsmtpd");
-#    safe_symlink("restart", "root/etc/e-smith/events/$event/services2adjust/sqpsmtpd");
-#    safe_symlink("restart", "root/etc/e-smith/events/$event/services2adjust/pop3");
-#    safe_symlink("restart", "root/etc/e-smith/events/$event/services2adjust/pop3s");   
-#    safe_symlink("reload", "root/etc/e-smith/events/$event/services2adjust/dovecot");   
-#    safe_symlink("force-reload", "root/etc/e-smith/events/$event/services2adjust/squid");   
-#    safe_symlink("sigterm", "root/etc/e-smith/events/$event/services2adjust/dnscache");  
+    
+    safe_symlink("restart", "root/etc/e-smith/events/$event/services2adjust/qpsmtpd");
+    safe_symlink("restart", "root/etc/e-smith/events/$event/services2adjust/sqpsmtpd");
+    safe_symlink("restart", "root/etc/e-smith/events/$event/services2adjust/pop3");
+    safe_symlink("restart", "root/etc/e-smith/events/$event/services2adjust/pop3s");   
+    safe_symlink("reload", "root/etc/e-smith/events/$event/services2adjust/dovecot");   
+    safe_symlink("force-reload", "root/etc/e-smith/events/$event/services2adjust/squid");   
+    safe_symlink("sigterm", "root/etc/e-smith/events/$event/services2adjust/dnscache");  
 
-#}
+}
 
 
 #-------------------------------------------------
