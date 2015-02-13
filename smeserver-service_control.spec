@@ -1,6 +1,6 @@
 %define name smeserver-service_control
 %define version 2.2
-%define release 3
+%define release 4
 Summary: SME Server service control Panel
 Name: %{name}
 Version: %{version}
@@ -9,17 +9,20 @@ Distribution: SME Server
 License: GNU GPL version 2
 Group: SMEserver/addon
 Source: %{name}-%{version}.tar.gz
-#Patch0: smeserver-service_control-2.0-utf8.patch
 BuildArchitectures: noarch
 BuildRoot: /var/tmp/%{name}-%{version}-buildroot
 BuildRequires: e-smith-devtools
-Requires: e-smith-release >= 8.0
+Requires: e-smith-release >= 9.0
 AutoReqProv: no
 
 
 %changelog
+* Wed Feb 13 2015 stephane de labrusse <stephdl@de-labrusse.fr> - 2.0-4
+- New expand-template of service-expand with a link to bootstrap-console-save
+- sigusr1 to httpd when service-expand is called 
+
 * Wed May 21 2014 stephane de labrusse <stephdl@de-labrusse.fr> - 2.0-3
-* adaptation to git use, creation of service2adjust by createlinks
+- adaptation to git use, creation of service2adjust by createlinks
 
 * Wed Jan 22 2014 stephane de labrusse <stephdl@de-labrusse.fr>
 - first release for SME Server 8.0 thanks to Michel Van hees for his work
