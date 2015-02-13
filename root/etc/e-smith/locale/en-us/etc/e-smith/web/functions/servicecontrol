@@ -122,7 +122,7 @@
         <base>ALERTprivate</base>
         <trans>
         <![CDATA[
-        <b>BEWARE</b><br />Are you sure you want to put this service in public access<b>!!!</b>
+        <b>BEWARE</b><br />Are you sure you want to put this service in <b>private access!!!</b>
         ]]>
         </trans>
     </entry>
@@ -130,7 +130,15 @@
         <base>ALERTpublic</base>
         <trans>  
         <![CDATA[
-        <b>BEWARE</b><br />Are you sure you want to put this service in private access<b>!!!</b>
+        <b>BEWARE</b><br />Are you sure you want to put this service in <b>public access!!!</b>
+        ]]>
+        </trans>
+    </entry>
+    <entry>
+        <base>ALERTlocalhost</base>
+        <trans>
+        <![CDATA[
+        <b>BEWARE</b><br />Are you sure you want to put this service in <b>localhost access!!!</b>
         ]]>
         </trans>
     </entry>
@@ -140,15 +148,19 @@
     </entry>
     <entry>
         <base>SERVICE_ACCESS_ACTION</base>
-        <trans>Public/Private Access</trans>
+        <trans>Localhost/Private/Public Access</trans>
     </entry>
     <entry>
         <base>SERVICE_ACCESS_public</base> 
-        <trans>Private</trans>
+        <trans>Public</trans>
     </entry>
     <entry>
         <base>SERVICE_ACCESS_private</base> 
-        <trans>Public</trans>
+        <trans>Private</trans>
+    </entry>
+    <entry>
+        <base>SERVICE_ACCESS_localhost</base>
+        <trans>Localhost</trans>
     </entry>
     <entry>
         <base>SERVICE_FORM_ACCESS</base>

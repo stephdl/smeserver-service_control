@@ -15,14 +15,14 @@ panel_link("servicecontrol", "manager");
 foreach my $event (qw( service-access 
                         service-one))
     {
-    safe_symlink("sigusr1", "root/etc/e-smith/events/$event/services2adjust/httpd-e-smith");
-    safe_symlink("sigusr1", "root/etc/e-smith/events/$event/services2adjust/httpd-admin");
+#    safe_symlink("sigusr1", "root/etc/e-smith/events/$event/services2adjust/httpd-e-smith");
+#    safe_symlink("sigusr1", "root/etc/e-smith/events/$event/services2adjust/httpd-admin");
     safe_symlink("adjust", "root/etc/e-smith/events/$event/services2adjust/masq");
-    safe_symlink("sigterm", "root/etc/e-smith/events/$event/services2adjust/pptpd");
-    safe_symlink("sighup", "root/etc/e-smith/events/$event/services2adjust/qmail");
+#    safe_symlink("sigterm", "root/etc/e-smith/events/$event/services2adjust/pptpd");
+#    safe_symlink("sighup", "root/etc/e-smith/events/$event/services2adjust/qmail");
     safe_symlink("sigterm", "root/etc/e-smith/events/$event/services2adjust/radiusd");
-    safe_symlink("sighup", "root/etc/e-smith/events/$event/services2adjust/sshd");
-    safe_symlink("restart", "root/etc/e-smith/events/$event/services2adjust/wan");
+#    safe_symlink("sighup", "root/etc/e-smith/events/$event/services2adjust/sshd");
+#    safe_symlink("restart", "root/etc/e-smith/events/$event/services2adjust/wan");
     safe_symlink("restart", "root/etc/e-smith/events/$event/services2adjust/squid");
 
    # Added by stephdl for testing purpose, not sure is needed

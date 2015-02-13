@@ -128,9 +128,11 @@ sub main {
     {
       my $can= $fm->{cgi}->param('cancel') || 'no';
       my $service = $fm->{cgi}->param('service');
+      my $access = $fm->{cgi}->param('access');
+
       if ( $can eq 'no' ) 
       {
-          $fm->AccessChange($service);
+          $fm->AccessChange($service,$access);
       } else {
         $fm->error("ACTION_CANCEL_USER");
       }
@@ -392,7 +394,7 @@ sub displayConfirmTCP {
     print '  <input type="hidden" name="service" value="' . $service . '" />';
     print '  <input type="hidden" name="port" value="' . $port . '" />';
     print '  <input type="hidden" name="wherenext" value="TCPPORTEdit" />';
-    print '  <p><b>' . $service . '</b></p>';
+    print '  <p><b>' . $service . " : $port" . '</b></p>';
     print '  <p>' . $self->localise('ALERTTCP') . '</p>';
     print '  <input type="submit" name="cancel" value="' . $self->localise('CANCEL') . '" />';
     print '  <input type="submit" name="submit" value="' . $self->localise('VALIDE') . '" />';
@@ -471,7 +473,7 @@ sub displayServiceAccess {
     {
         $prop_value = $config->get($filter)->prop("access") || "Error";
         if ($prop_value ne 'Error') {
-            if ($prop_value eq 'private' || $prop_value eq 'public') {
+            if ($prop_value eq 'private' || $prop_value eq 'public'|| $prop_value eq 'localhost') {
                 print '  <tr>';
                 print '    <td>' . $filter . '</td>';
 	        print '    <td>' . $prop_value . '</td>';
@@ -482,7 +484,9 @@ sub displayServiceAccess {
                 print '        <input type="hidden" name="action" value="ServiceAccessConfirm" />';
                 print '        <input type="hidden" name="service" value="' . $filter . '" />';
                 print '        <input type="hidden" name="wherenext" value="ServiceAccessConfirm" />';
-                print '        <input type="submit" name="submit" value="' . $self->localise('SERVICE_ACCESS_' . $prop_value) . '" />';
+                print '        <input type="submit" name="access" value="' . $self->localise('SERVICE_ACCESS_localhost') . '" />';
+                print '        <input type="submit" name="access" value="' . $self->localise('SERVICE_ACCESS_private') . '" />';
+                print '        <input type="submit" name="access" value="' . $self->localise('SERVICE_ACCESS_public') . '" />';
                 print '      </form>';
                 print '    </td>';
 	        print '  </tr>';
@@ -500,8 +504,13 @@ Display confirmation message for service activation part
 =cut
 
 sub displayConfirmAccess {
-    my ($self) = @_;
-    my $service = $self->{cgi}->param('service') || '';
+    my ($self,$service,$access) = @_;
+    $service = $self->{cgi}->param('service') || '';
+    $access = $self->{cgi}->param('access') || '';
+
+    $access = 'private' if $access eq $self->localise('SERVICE_ACCESS_private');
+    $access = 'localhost' if $access eq $self->localise('SERVICE_ACCESS_localhost');
+    $access = 'public' if $access eq $self->localise('SERVICE_ACCESS_public');
     
     my $q = $self->{cgi};
     
@@ -514,7 +523,7 @@ sub displayConfirmAccess {
     print '  <input type="hidden" name="service" value="' . $service . '" />';
     print '  <input type="hidden" name="wherenext" value="ServiceAccess" />';
     print '  <p><b>' . $service . '</b></p>';
-    print '  <p>' . $self->localise('ALERT' . $record->prop("access")) . '</p>';    
+    print '  <p>' . $self->localise('ALERT' . $access) . '</p>';    
     print '  <input type="submit" name="cancel" value="' . $self->localise('CANCEL') . '" />';
     print '  <input type="submit" name="submit" value="' . $self->localise('VALIDE') . '" />';
     print '</form>';
@@ -529,7 +538,7 @@ swap service access
 =cut
 
 sub AccessChange {
-    my ($self, $service) = @_;
+    my ($self, $service,$access) = @_;
     my $action;
     my $startScript;
     my $record = $config->get($service);
@@ -542,11 +551,17 @@ sub AccessChange {
         die "Bad data in '$service'";  # log this somewhere
     }
 
-    if ( $record->prop("access") eq 'private' )
+     if ( $access eq $self->localise('SERVICE_ACCESS_localhost') )
+    {
+        $record->set_prop("access", "localhost");
+    }
+    elsif ( $access eq $self->localise('SERVICE_ACCESS_private') )
+    {
+        $record->set_prop("access", "private");
+    } 
+    elsif ( $access eq $self->localise('SERVICE_ACCESS_public') )
     {
         $record->set_prop("access", "public");
-    } else {
-        $record->set_prop("access", "private");
     }
 #expand all templates
     esmith::event::event_signal("service-expand");
@@ -566,10 +581,12 @@ sub AccessChange {
         $service = 'qpsmtpd' if ( $service eq 'smtpd');
         $service = 'sqpsmtpd' if ( $service eq 'ssmtpd');
 
-    $action="restart";
+    my $serv_status = $record->prop("status") || 'disabled';
+    
+       $action="restart";
 
-   $startScript = glob("/etc/rc.d/rc7.d/S*$service");
-    if ($startScript){
+    $startScript = glob("/etc/rc.d/rc7.d/S*$service");
+    if ($startScript && ($serv_status eq 'enabled')){
     esmith::event::event_signal("service-access", $service, $action);}
 
     $self->success("SUCCESSFULLY_ACTIVATE_SERVICE");

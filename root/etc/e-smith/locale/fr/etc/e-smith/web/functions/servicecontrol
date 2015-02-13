@@ -1,13 +1,12 @@
 <lexicon lang="fr">
     <entry>
         <base>Configuration</base>
-        <trans>\n      Configuration\n    </trans>
+        <trans>Configuration</trans>
     </entry>
     <entry>        
 	<base>Service Control</base>
         <trans>Controler tous les services</trans>
     </entry>
-
     <entry>
         <base>FORM_TITLE</base>
         <trans>Service Control</trans>
@@ -124,19 +123,47 @@
     </entry>
     <entry>
         <base>SERVICE_ACCESS_ACTION</base>
-        <trans>Accès Publique/Privé</trans>
+        <trans>Accès Hôte Local/Privé/Publique</trans>
+    </entry>
+    <entry>
+        <base>SERVICE_ACCESS_localhost</base>
+        <trans>Hôte Local</trans>
     </entry>
     <entry>
         <base>SERVICE_ACCESS_public</base> 
-        <trans>Privé</trans>
+        <trans>Public</trans>
     </entry>
     <entry>
         <base>SERVICE_ACCESS_private</base> 
-        <trans>Publique</trans>
+        <trans>Privé</trans>
     </entry>
     <entry>
         <base>SERVICE_FORM_ACCESS</base>
         <trans>Service Accès</trans>
+    </entry>
+    <entry>
+        <base>ALERTprivate</base>
+        <trans>
+        <![CDATA[
+        <b>ATTENTION</b><br />Etes vous sur de vouloir mettre ce service en <b>mode accès privé!!!</b>
+        ]]>
+        </trans>
+    </entry>
+    <entry>
+        <base>ALERTpublic</base>
+        <trans>
+        <![CDATA[
+        <b>ATTENTION</b><br />Etes vous sur de vouloir mettre ce service en <b>mode accès public!!!</b>
+        ]]>
+        </trans>
+    </entry>
+    <entry>
+        <base>ALERTlocalhost</base>
+        <trans>
+        <![CDATA[
+        <b>ATTENTION</b><br />Etes vous sur de vouloir mettre ce service en <b>accès restreint sur l'hôte local!!!</b>
+        ]]>
+        </trans>
     </entry>
 </lexicon>
 
