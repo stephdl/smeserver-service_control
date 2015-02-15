@@ -592,4 +592,4 @@ sub AccessChange {
     $self->success("SUCCESSFULLY_ACTIVATE_SERVICE");
 }
 
-;
+1;

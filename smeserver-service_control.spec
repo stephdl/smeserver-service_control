@@ -1,6 +1,6 @@
 %define name smeserver-service_control
 %define version 2.2
-%define release 4
+%define release 5
 Summary: SME Server service control Panel
 Name: %{name}
 Version: %{version}
@@ -17,7 +17,12 @@ AutoReqProv: no
 
 
 %changelog
-* Wed Feb 13 2015 stephane de labrusse <stephdl@de-labrusse.fr> - 2.0-4
+* Sun Feb 15 2015 stephane de labrusse <stephdl@de-labrusse.fr> - 2.2-5
+- Services with localhost access are now manageable
+- Cosmetic changes in the Panel
+- Optimisation of service2adjust in createlinks
+
+* Wed Feb 13 2015 stephane de labrusse <stephdl@de-labrusse.fr> - 2.2-4
 - New expand-template of service-expand with a link to bootstrap-console-save
 - sigusr1 to httpd when service-expand is called 
 
